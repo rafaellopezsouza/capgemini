@@ -1,2 +1,1 @@
-steps\LoginSteps.class
-Runner.class
+runners\TestRunner.class
