@@ -1,5 +1,6 @@
 package stepsDefinitions;
 
+import PageObject.LoginPage;
 import Utils.DriverManager;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Quando;
@@ -11,6 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class LoginSteps {
     WebDriver driver = DriverManager.getDriver();
+    LoginPage loginPage = new LoginPage(driver);
 
     @Dado("que o utilizador está no ecrã de login do SauceDemo")
     public void abrirPaginaLogin() {
@@ -20,9 +22,9 @@ public class LoginSteps {
 
     @Quando("o utilizador insere as credenciais válidas")
     public void inserirCredenciaisValidas() {
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");
-        driver.findElement(By.id("password")).sendKeys("secret_sauce");
-        driver.findElement(By.id("login-button")).click();
+        loginPage.enterUsername("standard_user");
+        loginPage.enterPassword("secret_sauce");
+        loginPage.clickLogin();
     }
 
     @Então("ele deve ver ecrã inicial com a lista de produtos")
