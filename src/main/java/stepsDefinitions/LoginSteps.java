@@ -11,7 +11,6 @@ import io.cucumber.java.pt.Então;
 public class LoginSteps {
     WebDriver driver = DriverManager.getDriver();
     LoginPage loginPage = new LoginPage(driver);
-
     @Dado("que o utilizador está no ecrã de login do SauceDemo")
     public void abrirPaginaLogin() {
         loginPage.openPage();
