@@ -6,9 +6,15 @@ public class LoginPage {
     private static final String input_username_id = "user-name";
     private static final String input_password_id = "password";
     private static final String button_login_id = "login-button";
+    private static final String url = "https://www.saucedemo.com/";
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
+    }
+
+    public void openPage(){
+        driver.get(url);
+        driver.manage().window().maximize();
     }
     public void enterUsername(String username) {
         driver.findElement(By.id(input_username_id)).sendKeys(username);
