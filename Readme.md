@@ -24,8 +24,9 @@ Instale as dependências e compile o projeto. Na raiz do projeto correr o comand
    ```
    mvn clean install
    ```
-**3.Executar os Testes**
-Correr via IDE, selecionar current file no *featureFile.feature*, e executar o *Run*.
+**3. Executar os Testes**  
+- Correr via IDE, selecionar current file no *featureFile.feature*, e executar o *Run*.
+- Correr via IDE, no ficheiro *featureFile.feature*, clicar botão direito do rato e  *Run*.
 
 ## 🛠 Estrutura do projeto
 src/main/java: Código principal.  
